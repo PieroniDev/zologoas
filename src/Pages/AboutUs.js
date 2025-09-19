@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Camera, ArrowLeft } from "lucide-react";
 
@@ -16,7 +15,7 @@ export default function AboutUs() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 via-amber-50 to-stone-100">
       {/* Botão voltar */}
-      <Link to={createPageUrl("Home")}>
+      <Link to="/">
         <Button
           variant="ghost"
           className="fixed top-6 left-6 z-10 bg-white/80 backdrop-blur-sm rounded-full"
@@ -53,7 +52,7 @@ export default function AboutUs() {
                 </p>
                 
                 <div className="pt-8">
-                  <Link to={createPageUrl("Gallery")}>
+                  <Link to="/galeria">
                     <Button 
                       size="lg" 
                       className="bg-stone-700 hover:bg-stone-800 text-white px-8 py-4 rounded-full text-lg serif-body font-medium shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"

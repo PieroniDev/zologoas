@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { ArrowLeft, CheckCircle2, XCircle } from "lucide-react";
@@ -123,7 +122,7 @@ export default function Quiz() {
                 {success ? (
                     <Button
                         size="lg"
-                        onClick={() => navigate(createPageUrl("Counter"))}
+                        onClick={() => navigate("/contador")}
                         className="bg-green-600 hover:bg-green-700 text-white rounded-full px-8 py-3 serif-body"
                     >
                         Desbloquear Surpresa
@@ -145,7 +144,7 @@ export default function Quiz() {
         <div className="min-h-screen bg-gradient-to-br from-amber-50 to-stone-100 flex items-center justify-center p-6">
             <Button
                 variant="ghost"
-                onClick={() => navigate(createPageUrl("Gallery"))}
+                onClick={() => navigate("/galeria")}
                 className="fixed top-6 left-6 z-10 bg-white/80 backdrop-blur-sm rounded-full shadow-lg"
             >
                 <ArrowLeft className="w-4 h-4" />

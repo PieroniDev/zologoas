@@ -1,17 +1,30 @@
+// src/App.js
+
 import React from 'react';
-import Header from '../components/Header'; // Importa o Header
-import Footer from '../components/Footer'; // Importa o Footer
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Importando suas páginas e o layout
+import Layout from '../Layout'; // Corrigido o caminho de importação
+import HomePage from './Pages/Home';
+import AboutUsPage from './Pages/AboutUs';
+import GalleryPage from './Pages/Gallery';
+import QuizPage from './Pages/Quiz';
+import CounterPage from './Pages/Counter';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <main>
-        <h2>Bem-vindo à Página Principal!</h2>
-        <p>Aqui você pode começar a adicionar o conteúdo principal do seu site.</p>
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          {/* Cada <Route> define uma página */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/sobre" element={<AboutUsPage />} />
+          <Route path="/galeria" element={<GalleryPage />} />
+          <Route path="/quiz" element={<QuizPage />} />
+          <Route path="/contador" element={<CounterPage />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

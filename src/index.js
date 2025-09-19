@@ -1,16 +1,10 @@
+// src/index.js
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from '../App'; // Importa o componente App com as rotas
 
-// Cria um componente React simples
-function App() {
-  return <h1>Olá, Mundo!</h1>;
-}
-
-// Encontra a div 'root' no seu HTML
-const rootElement = document.getElementById('root');
-
-// Renderiza sua aplicação React dentro da div 'root'
-const root = ReactDOM.createRoot(rootElement);
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />

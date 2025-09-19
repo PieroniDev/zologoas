@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -44,7 +43,7 @@ export default function Home() {
           </p>
 
           {/* Botão elegante */}
-          <Link to={createPageUrl("AboutUs")}>
+          <Link to="/sobre">
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-full text-lg serif-body font-medium shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"

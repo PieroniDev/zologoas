@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -58,7 +57,7 @@ export default function Gallery() {
       />
 
       {/* Botão voltar */}
-      <Link to={createPageUrl("AboutUs")}>
+      <Link to="/sobre">
         <Button
           variant="ghost"
           className="fixed top-6 left-6 z-40 bg-white/80 backdrop-blur-sm rounded-full shadow-lg"
@@ -165,7 +164,7 @@ export default function Gallery() {
 
       {/* Botão do Quiz */}
       <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-        <Link to={createPageUrl("Quiz")}>
+        <Link to="/quiz">
           <Button 
             size="lg" 
             className="bg-stone-700 hover:bg-stone-800 text-white px-8 py-4 rounded-full text-lg serif-body font-medium shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
