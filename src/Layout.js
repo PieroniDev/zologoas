@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import MusicPlayer from "../components/MusicPlayer";
+import MusicPlayer from "./Components/MusicPlayer";
 
 export default function Layout({ children, currentPageName }) {
     return (
